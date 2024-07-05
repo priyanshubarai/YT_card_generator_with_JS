@@ -25,6 +25,7 @@
     border-radius: 10px;
     display: flex;
     align-items: center;
+    position: absolute;
 }
 .image{
     width: 150px;
@@ -63,3 +64,17 @@ img{
     display: flex;
     gap: 10px;
 }
+.image > .duration{
+    background-color: black;
+    color: white;
+    height: 20px;
+    width: 35px;
+    position: relative;
+    top: -30px;
+    left: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    font-size: 13px;
+} 

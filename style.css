@@ -1,11 +1,16 @@
 /* #0f0f0f dark */
 /* #272727 light */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
-.container{
+.bg{
     height: 100vh;
     width: 100vw;
     background-color: #0f0f0f;
@@ -14,18 +19,47 @@
 }
 .card{
     width: 100vw;
-    height: 100px;
+    height: 110px;
     background-color: #272727;
     margin: 20px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
 }
 .image{
     width: 150px;
     height: 90px;
-    margin: 5px;
+    margin: 5px 10px;
     border-radius: 5px;
 }
 img{
     height: inherit;
     width: inherit;
+}
+.text{
+    height: 90px;
+    width: 1150px;
+    margin: 5px 10px;
+    display: flex;
+    align-items: start;
+}
+.text > .container{
+    height: 60px;
+    width: 1150px;
+}
+.text > .container > .title{
+    color: white;
+    height: 35px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: larger;
+}
+.text > .container > .vid_info{
+    height: 25px;
+    width: 1150px;
+    color: #7c7a7c;
+    font-size: 14px;
+    display: flex;
+    gap: 10px;
 }

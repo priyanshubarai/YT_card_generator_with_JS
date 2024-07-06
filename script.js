@@ -1,6 +1,14 @@
-function createCard(title, cName, views, monthsOld, duration, thumbnail){
-    // using DOM access elements and change values
+function add_card() {
+    let newdiv = document.createElement("div")
+    document.body.getElementsByClassName("bg")[0].append(newdiv)
+    document.body.getElementsByClassName("bg")[0].lastElementChild.setAttribute("class","card")
 
+}
+
+function createCard(title, cName, views, monthsOld, duration, thumbnail){
+    // Adding a card
+    add_card();
+    
     //TITLE
     document.getElementsByClassName("title")[0].innerText = title;
     //Channel name

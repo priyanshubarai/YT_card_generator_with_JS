@@ -1,10 +1,18 @@
-function createCard(title, cName, views, monthsOld, duration, thumbnail){
-    // using DOM access elements and change values
+function add_card() {
+    let newdiv = document.createElement("div")
+    document.body.getElementsByClassName("bg")[0].append(newdiv)
+    document.body.getElementsByClassName("bg")[0].lastElementChild.setAttribute("class","card")
+    document.body.getElementsByClassName("bg")[0].lastElementChild.innerHTML = '<div class="image"><img src="index.html" alt=""><div class="duration">3:15</div></div><div class="text"><div class="container"><div class="title">TITLE</div><div class="vid_info"><div class="channel">channel</div><span>-</span><div class="views">view</div><span>-</span><div class="upload_time">time</div></div></div></div>'
+}
 
+function createCard(title, cName, views, monthsOld, duration, thumbnail){
+    // Adding a card
+    add_card();
+    
     //TITLE
-    document.getElementsByClassName("title")[0].innerText = title;
+    document.body.getElementsByClassName("bg")[0].lastElementChild.getElementsByClassName("title")[0].innerText = title;
     //Channel name
-    document.getElementsByClassName("channel")[0].innerText = cName;
+    document.body.getElementsByClassName("bg")[0].lastElementChild.getElementsByClassName("channel")[0].innerText = cName;
     //views
     function view_count(views) {
         let count = 0;
@@ -39,13 +47,13 @@ function createCard(title, cName, views, monthsOld, duration, thumbnail){
             return views;
         }
     }
-    document.getElementsByClassName("views")[0].innerText = view_count(views);
+    document.body.getElementsByClassName("bg")[0].lastElementChild.getElementsByClassName("views")[0].innerText = view_count(views);
     //upload time
-    document.getElementsByClassName("upload_time")[0].innerText = monthsOld.toString() + " months ago";
+    document.body.getElementsByClassName("bg")[0].lastElementChild.getElementsByClassName("upload_time")[0].innerText = monthsOld.toString() + " months ago";
     //duration
-    document.getElementsByClassName("duration")[0].innerText = duration;
+    document.body.getElementsByClassName("bg")[0].lastElementChild.getElementsByClassName("duration")[0].innerText = duration;
     //thumbnail
-    document.getElementsByClassName("image")[0].children[0].setAttribute("src",thumbnail);
+    document.body.getElementsByClassName("bg")[0].lastElementChild.getElementsByTagName("img")[0].setAttribute("src",thumbnail);
 }
 
 
